@@ -7,7 +7,7 @@ mypath takes a path and prints the corresponding local path. Works for gems and 
     $ mypath "[GEM_ROOT]/gems/resque-1.10.0/lib/resque/worker.rb:157:in `perform'"
     /Users/daniel/.rvm/gems/ree-1.8.7-2010.02/gems/resque-1.10.0/lib/resque/worker.rb
 
-    # In this case, the following was in the osx clipboard:
+    # In the next case, the following was in the osx clipboard:
     # lib/synchronizable_model.rb:51:in `perform'
     # lib/synchronizable_model.rb:70:in `replicate'
     # lib/synchronizable_model.rb:22:in `remote_update'
@@ -37,6 +37,7 @@ mypath takes a path and prints the corresponding local path. Works for gems and 
     # [GEM_ROOT]/gems/activesupport-2.3.10/lib/active_support/callbacks.rb:178:in `send'
     # [GEM_ROOT]/gems/activesupport-2.3.10/lib/active_support/callbacks.rb:178:in `evaluate_method'
     # [GEM_ROOT]/gems/activesupport-2.3.10/lib/active_support/callbacks.rb:166:in `call'
+
     $ pbpaste | mypath
     /Users/daniel/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.10/lib/active_support/callbacks.rb
     /Users/daniel/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.10/lib/active_record/callbacks.rb
