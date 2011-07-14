@@ -10,10 +10,9 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Daniel Higginbotham"]
   s.date = %q{2011-07-14}
-  s.default_executable = %q{mypath}
   s.description = %q{finds a local path corresponding to a given path}
   s.email = %q{daniel@flyingmachinestudios.com}
-  s.executables = ["mypath"]
+  s.executables = ["mypath", "mypath"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -27,10 +26,12 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "bin/mypath",
     "lib/mypath.rb",
     "lib/mypath/handler.rb",
     "lib/mypath/handler/cwd.rb",
     "lib/mypath/handler/gem.rb",
+    "mypath.gemspec",
     "spec/dummy_gem_home/gems/dummy_gem-0.0.0/dummy_gem.rb",
     "spec/dummy_local_dir/lib/dummy_lib.rb",
     "spec/handler/cwd_spec.rb",
