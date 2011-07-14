@@ -8,4 +8,4 @@ paths = stdin || ARGV[0]
 paths = paths.split("\n")
 
 output = paths.collect{ |p| MyPath.local_path_for(p) }.select{ |p| !(p.nil? || p.empty?)}.uniq.join("\n")
-puts output if output
+puts output if output && !output.empty?

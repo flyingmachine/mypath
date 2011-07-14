@@ -1,3 +1,5 @@
+require 'rubygems'
+
 module MyPath
   require 'mypath/handler'
   require 'mypath/handler/gem'

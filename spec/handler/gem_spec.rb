@@ -20,12 +20,14 @@ describe MyPath::Handler::Gem do
   
   describe "#local_path" do
     it "returns a path relative to your local GEM_HOME environment variable" do
-      old_gem_home = ENV['GEM_HOME']
-      ENV['GEM_HOME'] = gem_home
-      
+      handler.class.stub(:local_gem_paths).and_return([File.join(gem_home, "gems")])
       handler.local_path.should == local_dummy_gem_path
-      
-      ENV['GEM_HOME'] = old_gem_home
+    end
+  end
+  
+  describe "#local_gem_paths" do
+    it "ends in 'gems'" do
+      handler.class.local_gem_paths.each{ |g| g.should =~ /gems$/ } 
     end
   end
 end

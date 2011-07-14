@@ -5,14 +5,15 @@ module MyPath
         clean_path(path) =~ /\/gems\//
       end
       
-      def local_path
-        gem_path = /.*?\/gems\/.*?([^\/]+?-\d\..*)/.match(self.path)[1]
-        if ENV['GEM_HOME']
-          File.join(ENV['GEM_HOME'], 'gems', gem_path)
-        else
-        end
+      def self.local_gem_paths
+        @local_gem_paths ||= ::Gem.path.collect{ |g| File.join(g, 'gems') }
       end
       
+      def local_path
+        remote_gem_path = /.*?\/gems\/.*?([^\/]+?-\d\..*)/.match(self.path)[1]
+        joined = self.class.local_gem_paths.collect{|g| File.join(g, remote_gem_path)}
+        Dir[*joined].first
+      end
     end
   end
 end
