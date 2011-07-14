@@ -1,7 +1,9 @@
 module MyPath
-  module Handler
-    class CWD
-      include Handler
+  class Handler
+    class CWD < Handler
+      def local_path
+        
+      end
     end
   end
 end

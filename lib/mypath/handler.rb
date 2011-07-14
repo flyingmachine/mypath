@@ -1,21 +1,23 @@
 module MyPath
-  module Handler
+  class Handler
+
     class << self
       attr_accessor :list
       
-      def included(mod)
-        self.list |= [mod]
-        
-        mod.extend(ClassMethods)
+      def inherited(klass)
+        self.list |= [klass]
       end
-    end
-    
-    self.list = []
-    
-    module ClassMethods
+      
       def clean_path(path)
         /.*?(\/.*)/.match(path)[1]
       end
+    end
+    self.list = []    
+    
+    attr_accessor :path
+    
+    def initialize(path)
+      self.path = self.class.clean_path(path)
     end
   end
 end
