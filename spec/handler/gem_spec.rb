@@ -12,7 +12,9 @@ describe MyPath::Handler::Gem do
     it "handles paths that contain /gems/" do
       MyPath::Handler::Gem.can_handle?(remote_dummy_gem_path).should be_true
     end
-    
+  end
+  
+  describe "#local_path" do
     it "returns a path relative to your local GEM_HOME environment variable" do
       old_gem_home = ENV['GEM_HOME']
       ENV['GEM_HOME'] = gem_home

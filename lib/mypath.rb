@@ -4,8 +4,12 @@ module MyPath
   require 'mypath/handler/cwd'
 
   class << self    
-    def find(path)
-      finder = Handler.for(path)
+    # Insstead of just finding one based on can_handle, it should call each in turn until it gets a path
+    def local_path_for(path)
+      handler = Handler.for(path)
+      if handler
+        puts handler.local_path
+      end
     end
   end
 end

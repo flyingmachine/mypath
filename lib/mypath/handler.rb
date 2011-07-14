@@ -11,6 +11,10 @@ module MyPath
       def clean_path(path)
         /.*?(\/.*)/.match(path)[1]
       end
+      
+      def for(path)
+        self.list.first{|h| h.can_handle?(path)}
+      end
     end
     self.list = []    
     
