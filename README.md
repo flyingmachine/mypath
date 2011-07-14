@@ -1,8 +1,10 @@
-= mypath
+mypath
+======
 
 mypath takes a path and prints the corresponding local path. Works for gems and for paths corresponding to your current working directory.
 
-== Examples
+Examples
+--------
 
     $ mypath "[GEM_ROOT]/gems/resque-1.10.0/lib/resque/worker.rb:157:in `perform'"
     /Users/daniel/.rvm/gems/ree-1.8.7-2010.02/gems/resque-1.10.0/lib/resque/worker.rb
@@ -48,7 +50,8 @@ mypath takes a path and prints the corresponding local path. Works for gems and 
     /Users/daniel/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.10/lib/active_record/connection_adapters/abstract/database_statements.rb
 
 
-== Contributing to mypath
+Contributing to mypath
+----------------------
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
@@ -58,7 +61,8 @@ mypath takes a path and prints the corresponding local path. Works for gems and 
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
-== Copyright
+Copyright
+---------
 
 Copyright (c) 2011 Daniel Higginbotham. See LICENSE.txt for
 further details.
