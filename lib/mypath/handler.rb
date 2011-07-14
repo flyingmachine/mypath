@@ -9,7 +9,7 @@ module MyPath
       end
       
       def clean_path(path)
-        path
+        path.gsub(/:.*/, "")
       end
       
       def for(path)
