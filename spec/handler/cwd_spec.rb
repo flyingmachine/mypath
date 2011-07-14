@@ -36,5 +36,13 @@ describe MyPath::Handler::CWD do
       handler.local_path.should == "lib/dummy_lib.rb"
       File.expand_path(handler.local_path).should == File.expand_path(File.join(dummy_local_dir, "lib/dummy_lib.rb"))
     end
+    
+    it "returns the corresponding local path for a path exactly corresponding to a relative local path" do
+      handler = MyPath::Handler::CWD.new("lib")
+      handler.local_path.should == "lib"
+      
+      handler = MyPath::Handler::CWD.new("lib/dummy_lib.rb")
+      handler.local_path.should == "lib/dummy_lib.rb"
+    end
   end
 end

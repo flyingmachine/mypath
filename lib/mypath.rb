@@ -8,7 +8,7 @@ module MyPath
     def local_path_for(path)
       handler = Handler.for(path)
       if handler
-        puts handler.local_path
+        handler.local_path
       end
     end
   end

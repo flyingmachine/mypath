@@ -15,10 +15,11 @@ Jeweler::Tasks.new do |gem|
   gem.name = "mypath"
   gem.homepage = "http://github.com/flyingmachine/mypath"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{finds a local path corresponding to a given path}
+  gem.description = %Q{finds a local path corresponding to a given path}
   gem.email = "daniel@flyingmachinestudios.com"
   gem.authors = ["Daniel Higginbotham"]
+  gem.executables << "mypath"
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   #  gem.add_runtime_dependency 'jabber4r', '> 0.1'

@@ -12,6 +12,10 @@ describe MyPath::Handler::Gem do
     it "handles paths that contain /gems/" do
       MyPath::Handler::Gem.can_handle?(remote_dummy_gem_path).should be_true
     end
+    
+    it "does not handle papths that do not contain /gems/" do
+      MyPath::Handler::Gem.can_handle?("/usr/sbin/test").should be_false
+    end
   end
   
   describe "#local_path" do
